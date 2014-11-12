@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <string name="app_name">TestCamera</string>
+    <string name="dump_button">dump</string>
+     <string name="dumping_button">dumping</string>
+     <string name="camera_button">camera</string>
+    <string name="dummy_content">DUMMY\nCONTENT</string>
+
+</resources>
