@@ -1,8 +1,13 @@
 package com.arcsoft.camerawrapper;
 
+import java.io.File;
+import java.io.IOException;
+
 import com.example.testcamera.R;
 
+import android.media.ExifInterface;
 import android.os.Bundle;
+import android.os.Environment;
 import android.view.KeyEvent;
 
 public class MyCameraActivity extends CameraActivity{
@@ -10,6 +15,18 @@ public class MyCameraActivity extends CameraActivity{
 	@Override
 	protected void onCreate(Bundle savedInstanceState) {
 		super.onCreate(savedInstanceState);
+		
+		ExifInterface exif;
+		try {
+			exif = new ExifInterface(Environment.getExternalStorageDirectory()+File.separator+"IMG_20150127171126_1.jpg");
+			String width = exif.getAttribute(ExifInterface.TAG_IMAGE_WIDTH);
+			String height = exif.getAttribute(ExifInterface.TAG_IMAGE_LENGTH);
+			System.out.println("_GetFileInfoByName3 get W&H from exif, w="+width+",h="+height); 
+		} catch (IOException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
+		
 	}
 	
 	  @Override
