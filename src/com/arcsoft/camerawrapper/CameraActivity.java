@@ -77,8 +77,6 @@ public abstract class CameraActivity extends Activity {
         initPreviewCallback();
         initUI();
         openCamera(mCameraId);
-        CClass c = new CClass();
-        c.test();
     }
     
     @Override
